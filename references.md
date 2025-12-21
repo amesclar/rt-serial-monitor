@@ -18,11 +18,19 @@
 ### Run
 
 ```bash
-python3 serial-monitor.py --sut-port /dev/ttyACM0 --test-port /dev/ttyACM1
+python3 serial-monitor.py --sut-port /dev/ttyACM01 --test-port /dev/ttyACM0
 ```
 
 
 ## Python
+
+### Activate Virtual Environment
+
+```bash
+python -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+```
 
 ### Install Dependencies
 
@@ -34,12 +42,6 @@ pip install --no-cache-dir -r requirements.txt
 
 ```bash
 pip freeze > requirements.txt
-```
-
-### Activate Virtual Environment
-
-```bash
-source venv/bin/activate
 ```
 
 ### Deactivate Virtual Environment

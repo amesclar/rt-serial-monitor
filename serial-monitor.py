@@ -1,16 +1,18 @@
 import serial
 import threading
 import sys
-import time
+import time 
 import argparse
 import os
+
+from datetime import datetime
 
 # Configuration
 BAUD_RATE = 9600
 
 def get_log_filename(prefix, log_dir):
     """Generates the log file path with the format: [SUT|TEST]-YYYY-MM-DD_HH-MM-SS.log"""
-    timestamp = time.strftime("%Y-%m-%d_%H-%M-%S")
+    timestamp = f"[{datetime.now().isoformat(sep=' ', timespec='seconds')}]"
     filename = f"{prefix}-{timestamp}.log"
     return os.path.join(log_dir, filename)
 
@@ -37,7 +39,7 @@ def read_from_port(port_name, prefix, log_dir):
                         
                         if line:
                             # Timestamp for the log line itself
-                            line_timestamp = time.strftime("[%Y-%m-%d %H:%M:%S.%f]")[:-3] 
+                            line_timestamp = f"[{datetime.now().isoformat(sep=' ', timespec='milliseconds')}]"
                             
                             console_output = f"[{prefix}] {line}"
                             log_output = f"{line_timestamp} {line}"
