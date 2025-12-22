@@ -10,7 +10,7 @@ Port output should be prefixed with SUT or TEST to identify the source of the lo
 
 Log messages should be timestamped using the following format: YYYY-MM-DD_HH-MM-SS.MS and the datetime function should be used to generate the timestamp; e.g. 
 
-```f"[{datetime.now().isoformat(sep=' ', timespec='milliseconds')}]"```
+```f"{datetime.now().isoformat(sep=' ', timespec='milliseconds')}"```
 
 Default ports:
 

@@ -12,7 +12,7 @@ BAUD_RATE = 9600
 
 def get_log_filename(prefix, log_dir):
     """Generates the log file path with the format: [SUT|TEST]-YYYY-MM-DD_HH-MM-SS.log"""
-    timestamp = f"[{datetime.now().isoformat(sep=' ', timespec='seconds')}]"
+    timestamp = f"{datetime.now().isoformat(sep='_', timespec='seconds')}"
     filename = f"{prefix}-{timestamp}.log"
     return os.path.join(log_dir, filename)
 

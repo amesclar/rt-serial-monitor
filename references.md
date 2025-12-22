@@ -4,9 +4,9 @@
   - [Serial Monitor](#serial-monitor)
     - [Run](#run)
   - [Python](#python)
+    - [Activate Virtual Environment](#activate-virtual-environment)
     - [Install Dependencies](#install-dependencies)
     - [Capture Dependencies](#capture-dependencies)
-    - [Activate Virtual Environment](#activate-virtual-environment)
     - [Deactivate Virtual Environment](#deactivate-virtual-environment)
     - [Create Virtual Environment](#create-virtual-environment)
     - [Install venv](#install-venv)
@@ -18,7 +18,7 @@
 ### Run
 
 ```bash
-python3 serial-monitor.py --sut-port /dev/ttyACM01 --test-port /dev/ttyACM0
+python3 serial-monitor.py --sut-port /dev/ttyACM1 --test-port /dev/ttyACM0
 ```
 
 
@@ -27,7 +27,7 @@ python3 serial-monitor.py --sut-port /dev/ttyACM01 --test-port /dev/ttyACM0
 ### Activate Virtual Environment
 
 ```bash
-python -m venv venv
+python3 -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
 ```
