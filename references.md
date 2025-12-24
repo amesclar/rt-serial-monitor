@@ -18,7 +18,7 @@
 ### Run
 
 ```bash
-python3 serial-monitor.py --sut-port /dev/ttyACM1 --test-port /dev/ttyACM0
+python3 serial_monitor.py --sut-port /dev/ttyACM1 --test-port /dev/ttyACM0
 ```
 
 
@@ -27,9 +27,7 @@ python3 serial-monitor.py --sut-port /dev/ttyACM1 --test-port /dev/ttyACM0
 ### Activate Virtual Environment
 
 ```bash
-python3 -m venv venv
 source venv/bin/activate
-pip install -r requirements.txt
 ```
 
 ### Install Dependencies
@@ -54,6 +52,8 @@ deactivate
 
 ```bash
 python3 -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
 ```
 
 ### Install venv
