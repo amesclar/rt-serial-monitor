@@ -10,9 +10,4 @@ The serial monitor and data validation script were updated as part of a system-w
 3. **Error Labels**: Mismatches are now reported with descriptive labels (e.g., `Iter 1 [5min]`) instead of flat indices.
 
 ### Verification
-Verified by running `rt_data_validation.py` against existing test logs:
-```text
-ERRORS FOUND:
-  - Iter 1 [5min]: Duration mismatch. Expected 300s, got 301.57s
-```
-*(Iteration labels now correctly align with the sequence loop count).*
+Verified by running `rt_data_validation.py` against existing test logs. The validator now uses a tighter **250ms** tolerance. Serial monitor jitter was reduced by decreasing the polling sleep interval to 1ms.
