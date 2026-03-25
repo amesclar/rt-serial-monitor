@@ -8,7 +8,7 @@ import os
 from datetime import datetime
 
 # Configuration
-BAUD_RATE = 9600
+BAUD_RATE = 115200
 
 def get_log_filename(prefix, log_dir):
     """Generates the log file path with the format: [SUT|TEST]-YYYY-MM-DD_HH-MM-SS.log"""
