@@ -9,9 +9,7 @@ serial monitor to capture regatta timer and test framework logs
 
 ## Usage
 
-```bash
-./serial-monitor.py --sut-port /dev/ttyACM0 --test-port /dev/ttyACM1
-```
+`see references.md
 
 ## Notes  
 
