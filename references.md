@@ -20,7 +20,7 @@
 
 ```bash
 source venv/bin/activate
-python3 serial_monitor.py --sut-port /dev/ttyUSB0 --test-port /dev/ttyACM9
+python3 serial_monitor.py --sut-port /dev/ttyUSB0 --test-port /dev/ttyACM0
 #python3 serial_monitor.py --sut-port /dev/ttyACM1 --test-port /dev/ttyACM0
 ```
 
