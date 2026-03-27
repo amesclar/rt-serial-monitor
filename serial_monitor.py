@@ -8,7 +8,7 @@ import os
 from datetime import datetime
 
 # Configuration
-BAUD_RATE = 9600
+BAUD_RATE = 115200
 
 def get_log_filename(prefix, log_dir):
     """Generates the log file path with the format: [SUT|TEST]-YYYY-MM-DD_HH-MM-SS.log"""
@@ -52,7 +52,7 @@ def read_from_port(port_name, prefix, log_dir):
                             log_file.write(log_output + '\n')
                             log_file.flush() # Ensure data is written to disk immediately
                     else:
-                         time.sleep(0.01) # Prevent CPU hogging
+                         time.sleep(0.001) # Reduced jitter
                 except OSError as e:
                     print(f"Error reading {port_name}: {e}")
                     break
